@@ -1,6 +1,6 @@
 # Ejemplo producto con variantes 1
 
-```json-ld
+```json
 {
     "@context": "http://schema.org/",
     "@type": "Product",

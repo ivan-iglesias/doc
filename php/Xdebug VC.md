@@ -67,21 +67,16 @@ Reiniciar `apache2`
 /etc/init.d/apache2 restart
 ```
 
+## Problema
 
+Con el comando `php -S 127.0.0.1:8888` funciona pero al intentar entrar a través del virtual host de Apache2 falla.
 
+Esto es porque apache usa el fichero `/etc/php/7.4/apache2/php.ini` y el comando el `/etc/php/7.4/cli/php.ini`. Puede ser que solo se tenga el archivo de configuración en `/etc/php/7.4/cli/conf.d/20-xdebug.ini` y no en `/etc/php/7.4/apache2/conf.d/`, por lo que cuando se entra mediante Apache no tiene la configuración.
 
-Con este comando funcionaba php -S 127.0.0.1:5555 pero al intentar entrar a través del vhost de Apache2 fallaba
+Para solucionarlo creamos un enlace simbólico y reiniciamos
 
-Esto es porque el php.ini que usa apache está en /etc/php/7.4/apache2/php.ini y el que utiliza el comando php -S [...] es este /etc/php/7.4/cli/php.ini. Y claro yo solo tenía el archivo de configuración en /etc/php/7.4/cli/conf.d/20-xdebug.ini y no en /etc/php/7.4/apache2/conf.d/. Por lo que cuando entraba por el dominio por Apache no hacia ni caso porque le faltaba el archivo de configuración.
+```sh
+sudo ln -s /etc/php/7.4/cli/conf.d/20-xdebug.ini /etc/php/7.4/apache2/conf.d/20-xdebug.ini
 
-Entonces lo que he hecho es sudo ln -s /etc/php/7.4/cli/conf.d/20-xdebug.ini /etc/php/7.4/apache2/conf.d/20-xdebug.ini para tenerlos igual siempre
-
-Luego sudo /etc/init.d/apache2 restart
-
-Y ya ha empezado a funcionar
-
-11:50
-
-
-
-Como ves, el archivo/directorio de configuración de apache era otro, donde no estaba el 20-xdebug.conf
+/etc/init.d/apache2 restart
+```
