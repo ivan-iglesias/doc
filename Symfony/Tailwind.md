@@ -3,7 +3,7 @@
 Instalar las siguientes dependencias
 
 ```sh
-npm install -D tailwindcss@latest postcss@latest postcss-loader@latest autoprefixer@latest
+npm i -D tailwindcss@latest postcss@latest postcss-loader@latest autoprefixer@latest
 ```
 
 En la raiz del proyecto, crear los siguientes dos ficheros
