@@ -1,8 +1,8 @@
 # Factory Abstract
 
-Factory Abstract es un patrón de diseño de creación que permite producir familias de objetos relacionados sin especificar sus clases concretas.
-
 [Referencia](https://refactoring.guru/design-patterns/abstract-factory)
+
+"Factory Abstract" es un patrón de diseño de creación que permite producir familias de objetos relacionados sin especificar sus clases concretas.
 
 ## Usos
 

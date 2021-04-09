@@ -1,8 +1,8 @@
 # Factory Method
 
-Patrón de diseño de creación que proporciona una interfaz para crear objetos en una superclase, pero permite a las subclases modificar el tipo de objetos que se crearán.
-
 [Referencia](https://refactoring.guru/design-patterns/factory-method)
+
+Patrón de diseño de creación que proporciona una interfaz para crear objetos en una superclase, pero permite a las subclases modificar el tipo de objetos que se crearán.
 
 ## Usos
 
