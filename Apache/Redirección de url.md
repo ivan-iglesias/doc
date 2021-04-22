@@ -12,6 +12,7 @@ Una redirección de ejemplo sería
 
 ```
 RewriteRule ^url/originen$ /url/destino [R=302,L]
+RewriteRule ^empresas/pymes(.*)$ /empresas$1  [R=301,L]
 ```
 
 A continuación pongo algunos de los [flags](https://httpd.apache.org/docs/2.4/rewrite/flags.html) mas usados:
