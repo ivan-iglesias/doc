@@ -1,9 +1,11 @@
 # Tailwind
 
-Instalar las siguientes dependencias
+Instalar las siguientes paquetes
 
 ```sh
-npm i -D tailwindcss@latest postcss@latest postcss-loader@latest autoprefixer@latest
+ composer require symfony/webpack-encore-bundle
+
+npm i -D @symfony/webpack-encore tailwindcss@latest postcss@latest postcss-loader@latest autoprefixer@latest
 ```
 
 En la raiz del proyecto, crear los siguientes dos ficheros
