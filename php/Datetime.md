@@ -1,5 +1,7 @@
 # Datetime
 
+https://www.php.net/manual/en/datetime.format.php
+
 ```php
 # int
 $date = strtotime('10/16/2003');
