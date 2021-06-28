@@ -2,18 +2,31 @@
 
 ## Docker
 
-*Referencia*: [https://www.freecodecamp.org](https://www.freecodecamp.org/news/where-are-docker-images-stored-docker-container-paths-explained)
+[Referencia](https://www.freecodecamp.org/news/where-are-docker-images-stored-docker-container-paths-explained)
 
-Para limpiar contenedores parados, redes sin uso, imagenes sin contenedores asociadosy la cache
+Para saber las imagenes, contenedores y volumenes usados
 
-```sh
+```
+docker system df
+```
+
+Si queremos elimunar todos los contenedores parados, redes sin uso, imagenes sin contenedores asociados y la cache
+
+```
 docker system prune -a
 ```
 
-Para limpiar volumenes no usados
+Para eliminar individualmente los distintos elementos
 
 ```sh
+# elimina volumenes no usados
 docker volumes prune
+
+# elimina imagenes no usadas
+docker image prune
+
+# elimina imagenes sin contenedores asociados o proyectos aprados
+docker image prune --all
 ```
 
 ## /var/log/journal

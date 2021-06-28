@@ -6,6 +6,15 @@ Solo usarse en *desarrollo* y en fase de *pruebas*. **Actualiza** las dependenci
 composer update / composer u
 ```
 
+Podemos concatenar multiples paquetes y añadir el tag `--with-dependencies` para que actualice las dependencias de los paquetes indicados.
+
+```sh
+composer u doctrine/doctrine-bundle \
+           doctrine/doctrine-fixtures-bundle \
+           doctrine/doctrine-migrations-bundle \
+           --with-dependencies
+```
+
 Se puede usar en *desarrollo*, *pruebas* y *producción*. **Instala** las dependencias que encuentre en el fichero *composer.lock*, si no esta, hará un *composer update* y lo creará. Por esta razón siempre hay que subirlo a producción.
 
 ```sh
@@ -25,7 +34,7 @@ composer require phpunit/phpunit
 
 composer require internet/ekt-core-bundle "^4.0"
 
-composer require internet/ekt-core-bundle:4.1"
+composer require internet/ekt-core-bundle:4.1
 ```
 
 **Instala y añade dependencias** en la sección *require-dev* del fichero *composer.json*. Solo se usaran en desarrollo y pruebas.
