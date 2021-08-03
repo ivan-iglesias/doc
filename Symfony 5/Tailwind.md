@@ -3,7 +3,7 @@
 Instalar las siguientes paquetes
 
 ```sh
- composer require symfony/webpack-encore-bundle
+composer require symfony/webpack-encore-bundle
 
 npm i -D @symfony/webpack-encore tailwindcss@latest postcss@latest postcss-loader@latest autoprefixer@latest
 ```

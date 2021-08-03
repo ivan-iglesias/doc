@@ -47,10 +47,10 @@ phpize
 # realizar la instalación
 make
 
-make install
+sudo make install
 ```
 
-Añadir en el fichero `/etc/php/7.4/cli/conf.d/20-xdebug.ini` o en el `/etc/php/7.4/cli/php.ini` el siguiente texto
+Añadir el siguiente texto en los ficheros `/etc/php/7.4/cli/conf.d/20-xdebug.ini` (mirar por que no funciona, para solucionarlo lo añadimos en `/etc/php/7.4/apache2/php.ini`) y `/etc/php/7.4/cli/php.ini`
 
 ```
 [xdebug]
